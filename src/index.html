@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/output.css">
+  <title>Nasa Daily</title>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-950 via-slate-700 to-slate-950 border-b-2 border-slate-900">
+  <header class="min-h-[20vh]">
+    <div class="w-[85%] max-w-[1200px] mx-auto relative">
+      <div class="flex flex-col justify-center items-center text-center py-[3vh] gap-1 md:gap-2">
+        <h1 class="font-bold text-4xl md:text-7xl text-gray-100">★ Nasa Daily ★</h1>
+        <p class="font-extralight text-gray-200 md:text-2xl italic">Veja fotos astronômicas postadas pela <b>NASA</b> diariamente!</p>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="min-h-[80vh]">
+      <div class="w-[85%] max-w-[1200px] mx-auto relative">
+        <div class="flex flex-col justify-center items-center gap-2 pt-2">
+          <button type="button" class="p-2 border-1 rounded-lg border-gray-100 text-gray-200 bg-gray-700 py-2 px-32 md:px-36 md:text-2xl md:mb-3">
+            Foto de Hoje
+          </button>
+          <button type="button" class="p-2 border-1 rounded-lg border-gray-100 text-gray-200 bg-gray-700 py-2 px-28 md:px-32 md:text-2xl">
+            Data Aleatória
+          </button>
+          <label for="date" class="text-gray-200">Escolher Data</label>
+          <input type="date" id="date" class="border-1 rounded-lg border-gray-100 text-gray-200 bg-gray-700 px-4 md:text-2xl">          
+        </div>
+        
+      </div>
+    </section>
+  </main>
+</body>
+</html>
