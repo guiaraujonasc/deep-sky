@@ -25,7 +25,7 @@ async function loadToday() {
     if (!response.ok) throw new Error("Houve um erro: " + response.status);
 
     const data = await response.json();
-    image.src = data.hdurl || data.url;
+    image.src = data.url;
     image.alt = data.copyright || "NASA"
     const photo_date_formatted = new Date(data.date + "T00:00:00").toLocaleDateString("pt-BR");
     photo_date.textContent = photo_date_formatted;
@@ -56,7 +56,7 @@ async function loadRandom() {
     if (!response.ok) throw new Error("Houve um erro: " + response.status);
 
     const data = await response.json();
-    image.src = data.hdurl || data.url;
+    image.src = data.url;
     image.alt = data.copyright || "NASA"
     const photo_date_formatted = new Date(data.date + "T00:00:00").toLocaleDateString("pt-BR");
     photo_date.textContent = photo_date_formatted;
