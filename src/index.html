@@ -17,14 +17,46 @@
     html {
       scroll-behavior: smooth;
     }
+    body::before {
+      content: '';
+      position: fixed;
+      z-index: 0;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(1px 1px at 10% 7%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 20% 20%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 95% 25%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2.5px 2.5px at 90% 90%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 75% 40%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 10% 75%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 35%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 80% 63%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2.75px 2.75px at 40% 67%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 50% 45%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 20% 60%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 50% 75%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 90% 60%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 90% 10%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 75% 25%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 65% 5%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 20% 85%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 95%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 60% 90%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 35% 15%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 20% 50%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 80% 55%, rgba(255, 255, 255, 0.8) 0%, transparent 100%);
+    }
   </style>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-slate-950 via-slate-700 to-slate-950 border-b-2 border-slate-900">
+<body class="min-h-screen bg-gradient-to-br from-blue via-gray-900 to-blue border-b-2 border-slate-900">
   <header class="min-h-[20vh]">
     <div class="w-[85%] max-w-[1200px] mx-auto relative">
       <div class="flex flex-col justify-center items-center text-center py-[3vh] gap-1 md:gap-2">
-        <h1 class="font-funnel text-4xl md:text-7xl text-gray-100 font-bold">★ Nasa Daily ★</h1>
-        <p class="font-light text-gray-200 md:text-2xl italic font-lato">Veja fotos astronômicas postadas pela <b>NASA</b> diariamente!</p>
+        <span class="text-gray-100 font-light font-funnel">★APOD</span>
+        <h1 class="font-funnel text-4xl md:text-7xl text-gray-200 font-extrabold">Deep Sky</h1>
+        <p class="font-light text-gray-100 md:text-2xl font-lato">Veja fotos astronômicas publicadas pela <b>NASA</b> todos os dias!</p>
       </div>
     </div>
   </header>
@@ -33,15 +65,15 @@
       <div class="w-[85%] max-w-[1200px] mx-auto relative">
         <div class="flex flex-col justify-center items-center gap-2 pt-2">
           <div class="flex flex-col justify-center items-center gap-4 md:flex-row">
-            <button type="button" class="font-lato p-2 border-1 rounded-lg border-gray-100 text-gray-200 bg-gray-700 py-2 px-32 md:px-36 md:text-2xl md:mb-3 transition duration-500 active:bg-gray-100 active:scale-105 active:text-slate-900 hover:bg-gray-100 hover:scale-105 hover:text-slate-900" onclick="loadToday()">
+            <button type="button" class="font-lato p-2 border-1 rounded-xl border-gray-100 text-gray-100 bg-transparent py-2 px-32 md:px-36 md:text-2xl md:mb-3 transition duration-500 active:bg-gray-100 active:scale-105 active:text-gray-800 hover:bg-gray-100 hover:scale-105 hover:text-gray-800" onclick="loadToday()">
               Foto Atual
             </button>
-            <button type="button" class="font-lato p-2 border-1 rounded-lg border-gray-100 text-gray-200 bg-gray-700 py-2 px-28 md:px-36 md:text-2xl md:mb-3 transition duration-500 active:bg-gray-100 active:scale-105 active:text-slate-900 hover:bg-gray-100 hover:scale-105 hover:text-slate-900" onclick="loadRandom()">
+            <button type="button" class="font-lato p-2 border-1 rounded-xl border-gray-100 text-gray-100 bg-transparent py-2 px-28 md:px-36 md:text-2xl md:mb-3 transition duration-500 active:bg-gray-100 active:scale-105 active:text-gray-800 hover:bg-gray-100 hover:scale-105 hover:text-gray-800" onclick="loadRandom()">
               Foto Aleatória
             </button>
           </div>
-          <label for="date" class="text-gray-200">Escolher Data</label>
-          <input type="date" id="date" class="font-lato border-1 rounded-lg border-gray-100 text-gray-200 bg-gray-700 px-4 md:text-2xl transition duration-500 active:bg-gray-100 active:scale-105 active:text-slate-900 hover:bg-gray-100 hover:scale-105 hover:text-slate-900">
+          <label for="date" class="text-gray-100 font-lato">Escolher Data</label>
+          <input type="date" id="date" class="font-lato border-1 rounded-xl border-gray-100 text-gray-100 bg-transparent px-4 md:text-2xl transition duration-500 active:bg-gray-100 active:scale-105 active:text-gray-800 hover:bg-gray-100 hover:scale-105 hover:text-slate-800">
           
           <div id="loading" class="mt-28 md:mt-36 mx-auto">
             <div id="spinner" class="w-12 h-12 rounded-full animate-spin border-t-4 border-t-gray-200 border-b-4 md:w-16 md:h-16">
@@ -51,7 +83,7 @@
           
           <p id="error_message" class="font-lato text-2xl text-black z-10 bg-red-700 p-5 rounded-xl"></p>
           
-          <div id="informations" class="flex flex-col justify-center gap-3 my-4 md:my-7 bg-gradient-to-b from-slate-700 via-slate-950 to-slate-700 rounded-xl border-2 border-slate-950 max-w-[525px]">
+          <div id="informations" class="flex flex-col justify-center gap-3 my-4 md:my-7 bg-gradient-to-b from-blue to-gray-900 backdrop-blur-md bg-black/40 rounded-xl border-2 border-slate-950 max-w-[525px]">
             
             
               
@@ -63,7 +95,7 @@
             
             
             
-            <p id="copyright" class="font-lato text-center text-gray-200 font-normal p-2 md:p-4 text-xs md:text-xs"></p>
+            <p id="copyright" class="font-lato text-center text-gray-200 p-2 md:p-4 text-xs"></p>
           </div>
           
         </div>

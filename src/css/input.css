@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme {
+  --color-blue: rgba(3, 5, 15, 1);
+
   --font-lato: "Lato", sans-serif;
   --font-funnel: "Funnel Display", sans-serif;
 };
