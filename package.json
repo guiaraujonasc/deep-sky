@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch",
-    "build": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --minify"
+    "dev": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch",
+    "build": "tailwindcss -i ./src/css/input.css -o ./src/css/output.css --minify"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
-    "tailwindcss": "^4.2.0"
+    "tailwindcss": "^4.1.18",
+    "@tailwindcss/cli": "^4.1.18"
   }
 }
