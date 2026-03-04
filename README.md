@@ -4,7 +4,9 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
 </div>
 
-<img src="preview.png" alt="preview">
+<div align="center">
+  <img src="preview.png" alt="preview">
+</div>
 
 > Visualize a Foto Astronômica do Dia da NASA (APOD) ou veja fotos já publicadas anteriormente (a partir de 16/06/1995)!
 
