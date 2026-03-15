@@ -8,14 +8,16 @@
   <img src="preview.png" alt="preview">
 </div>
 
-> Visualize a Foto Astronômica do Dia da NASA (APOD) ou veja fotos já publicadas anteriormente (a partir de 16/06/1995)!
+> Visualize a Foto Astronômica do Dia da NASA (APOD) ou veja fotos já publicadas anteriormente (a partir de 20/06/1995)!
 
 ## 🎉 Funcionalidades
 
 - [x] Visualizar foto astronômica do dia atual
 - [x] Exibir uma foto de data aleatória
 - [x] Pesquisar foto por data específica
+- [x] Adicionar uma foto aos favoritos ou remove-la (localstorage)
+- [x] Visualizar todas as fotos favoritadas
 
 
 > [!CAUTION]
-> O website atualmente está utilizando a chave de API pública disponibilizada pelo <a href="https://api.nasa.gov">site oficial da API</a> para obter os dados de cada imagem. Possui limite de 30 requisições por hora e 50 por dia (por IP); após exceder o limite será exibida uma mensagem de "ERRO 429".
+> O website atualmente está utilizando a chave de API pública disponibilizada pelo <a href="https://api.nasa.gov">site oficial da API</a> para obter os dados de cada imagem. Possui limite de 30 requisições por hora e 50 por dia (por IP); após exceder o limite será exibida uma mensagem de "Limite de requisições atingido".
