@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/output.css">
+  <title>Meus Favoritos - Deep Sky</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      z-index: 0;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(1px 1px at 10% 7%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 20% 20%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 95% 25%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2.5px 2.5px at 90% 90%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 75% 40%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 10% 75%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 35%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 80% 63%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2.75px 2.75px at 40% 67%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 50% 45%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 20% 60%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 50% 75%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 90% 60%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 90% 10%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 75% 25%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 65% 5%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 20% 85%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 95%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 60% 90%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 35% 15%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 20% 50%, rgba(255, 255, 255, 0.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 80% 55%, rgba(255, 255, 255, 0.8) 0%, transparent 100%);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-gradient-to-br from-blue via-gray-900 to-blue border-b-2 border-slate-900">
+  <header class="min-h-[20vh]">
+    <div class="w-[85%] max-w-[1200px] mx-auto relative">
+      <div class="flex flex-col justify-center items-center text-center py-[3vh] gap-1 md:gap-2">
+        <span class="text-gray-100 font-light font-funnel">★APOD</span>
+        <h1 class="font-funnel text-4xl md:text-7xl text-gray-200 font-extrabold">Deep Sky</h1>
+        <p class="font-light text-gray-100 md:text-2xl font-lato">Aqui estão suas imagens <b>favoritas!</b></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <div id="message" class="m-auto text-center text-base text-gray-400 py-8 mx-auto md:text-2xl">
+      O espaço está realmente vazio por aqui...
+    </div>
+    
+    <div id="favorites">
+      <div id="cards" class="grid grid-cols-1 md:grid-cols-4 gap-3 w-[80%] mx-auto">
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t-2 border-t-slate-950">
+    <p class="text-center text-gray-200 font-light text-xs p-2">
+      &copy; 2026 Guilherme Araújo Nascimento
+    </p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script>
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', viewFavorites);
+    } else {
+      viewFavorites();
+    }
+  </script>
+</body>
+</html>
