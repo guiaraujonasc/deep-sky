@@ -11,7 +11,7 @@ const user_date = document.getElementById("date");
 const message = document.getElementById("message");
 const favorites = document.getElementById("favorites");
 const cards = document.getElementById("cards");
-
+const success = document.getElementById("success");
 if (message && favorites) {
   message.style.display = "none";
   favorites.style.display = "none";
@@ -23,6 +23,7 @@ function clearView() {
   if (informations_box) informations_box.style.display = "none";
   if (error_message) error_message.style.display = "none";
   if (loading) loading.style.display = "none";
+  if (success) success.style.display = "none";
 }
 
 function randomDate() {
@@ -142,7 +143,7 @@ function favorite() {
       error_message.style.display = "none";
     }
     
-    alert("Imagem adicionada aos favoritos!");
+    success.style.display = "block";
   } catch {
     if (error_message) {
       error_message.textContent = "Erro ao favoritar a imagem!";
